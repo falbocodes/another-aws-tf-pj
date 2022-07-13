@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  react-app:
+    build:
+      context: ./react-app
+    ports:
+      - "80:80"
+    container_name: react-app
+    stdin_open: true
+    volumes:
+       - ./react-app:/app
+       - /app/node_modules
