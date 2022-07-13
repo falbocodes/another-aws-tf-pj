@@ -11,10 +11,8 @@ phases:
       - echo Building the Docker image...          
       - docker build -t react-app ./react-app
       - docker tag react-app:latest 420995033334.dkr.ecr.eu-west-1.amazonaws.com/react-app:latest
-      - docker tag react-app:$CODEBUILD_BUILD_ID 420995033334.dkr.ecr.eu-west-1.amazonaws.com/react-app:$CODEBUILD_BUILD_ID
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 420995033334.dkr.ecr.eu-west-1.amazonaws.com/react-app:latest
-      - docker push 420995033334.dkr.ecr.eu-west-1.amazonaws.com/react-app:$CODEBUILD_BUILD_ID
