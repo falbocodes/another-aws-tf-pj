@@ -1,0 +1,4 @@
+apiVersion: v2
+name: react-app
+description: a beautiful react app
+version: 0.1.0
