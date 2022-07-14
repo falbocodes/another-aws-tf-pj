@@ -32,3 +32,14 @@ resource "aws_ecr_lifecycle_policy" "ecr-react-app-policy" {
 }
 EOF
 }
+
+
+#############################
+## Docker Registry ECR PUBLIC
+
+resource "aws_ecrpublic_repository" "react-app-public" {
+  repository_name = "react-app"
+
+  provider = aws.us
+}
+
