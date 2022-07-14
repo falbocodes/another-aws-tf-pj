@@ -6,9 +6,9 @@ terraform {
     }
 
     kubernetes = {
-      source = "hashicorp/kubernetes"
+      source  = "hashicorp/kubernetes"
       version = "2.12.1"
-      
+
     }
   }
 }
@@ -19,12 +19,12 @@ provider "aws" {
 }
 
 provider "aws" {
-  region  = "us-east-1"
-  alias   = "us"
+  region = "us-east-1"
+  alias  = "us"
 }
 
 # Configure the K8 Provider
 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
+  config_path = "~/.kube/config"
 }

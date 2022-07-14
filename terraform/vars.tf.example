@@ -1,0 +1,5 @@
+
+variable "proj-name" {
+  default = "challenge"
+}
+

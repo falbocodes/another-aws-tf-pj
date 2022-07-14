@@ -34,12 +34,12 @@ EOF
 }
 
 
-#############################
-## Docker Registry ECR PUBLIC
+# #############################
+# ## Docker Registry ECR PUBLIC
 
-resource "aws_ecrpublic_repository" "react-app-public" {
-  repository_name = "react-app"
+# resource "aws_ecrpublic_repository" "react-app-public" {
+#   repository_name = "react-app"
 
-  provider = aws.us
-}
+#   provider = aws.us
+# }
 
