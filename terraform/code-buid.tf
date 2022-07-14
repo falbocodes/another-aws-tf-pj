@@ -19,7 +19,7 @@ resource "aws_codebuild_project" "project" {
     type            = "GITHUB"
     location        = "https://github.com/falbocodes/another-aws-tf-pj.git"
     git_clone_depth = 1
-    buildspec           = "react-app/buildspec.yml"
+    buildspec       = "react-app/buildspec.yml"
 
     git_submodules_config {
       fetch_submodules = true
