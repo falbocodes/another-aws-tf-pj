@@ -1,0 +1,5 @@
+build_id: latest
+microname: react-app
+replicas: 1
+namespace: challenge
+registry: public.ecr.aws/x4i4f6m5

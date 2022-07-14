@@ -46,10 +46,18 @@ resource "aws_iam_role_policy" "project-role" {
                 "ecr:DeleteRepositoryPolicy",
                 "ecr:InitiateLayerUpload",
                 "ecr:BatchCheckLayerAvailability",
-                "ecr:GetRepositoryPolicy"
+                "ecr:GetRepositoryPolicy",
+                "ecr-public:BatchCheckLayerAvailability",
+                "ecr-public:PutImage",
+                "ecr-public:InitiateLayerUpload",
+                "ecr-public:UploadLayerPart",
+                "ecr-public:CompleteLayerUpload",
+                "ecr-public:BatchDeleteImage",
+                "ecr-public:CreateRepository"
             ],
             "Resource": [
-                "${aws_ecr_repository.ecr-react-app.arn}"
+                "${aws_ecr_repository.ecr-react-app.arn}",
+                "${aws_ecrpublic_repository.react-app-public.arn}"
                 ]
         },
          {
